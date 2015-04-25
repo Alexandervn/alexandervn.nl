@@ -1,0 +1,11 @@
+{% extends 'default.html' %}
+
+{% block content %}
+<nav class="back mute"><a href="/" title="Go to the overview">&laquo; Go to the overview</a></nav>
+
+<article>
+<h1>{{ title }}</h1>
+<p class="mute subheading">By <a href="http://www.therock.nl" title="Therock, homepage of Alexander van Noord">Alexander van Noord</a> on <time datetime="{{ date | date('Y-m-d') }}" pubdate>{{ date | date('j F, Y') }}</time></p>
+{{ contents | safe }}
+</article>
+{% endblock %}
