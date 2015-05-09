@@ -14,10 +14,7 @@ find build/ -iname '*.gz' -exec rename 's/\.gz$//i' {} +
 echo '- S3'
 
 # Text-like files
-s3cmd sync --acl-public --add-header 'Content-Encoding:gzip' --exclude '*.*' --include '*.html' --include '*.css' --include '*.js' --include '*.svg' --include '*.txt' build/ s3://blog.alexandervn.nl
+aws s3 sync build/ s3://blog.alexandervn.nl --acl public-read --content-encoding 'gzip' --exclude '*.*' --include '*.html' --include '*.css' --include '*.js' --include '*.svg' --include '*.txt' --delete --region eu-west-1
 
 # Media-like files
-s3cmd sync --acl-public --exclude '*.*' --include '*.pdf' --include '*.dot' --include '*.jpg' --include '*.png' build/ s3://blog.alexandervn.nl
-
-# Clean up
-s3cmd sync --acl-public --delete-removed build/ s3://blog.alexandervn.nl
+aws s3 sync build/ s3://blog.alexandervn.nl --acl public-read --exclude '*.*' --include '*.pdf' --include '*.dot' --include '*.jpg' --include '*.png' --delete --region eu-west-1
