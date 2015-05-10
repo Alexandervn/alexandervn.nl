@@ -2,14 +2,25 @@
 
 {% block content %}
 <h1>Alexandervn</h1>
-<ul>
-    <li><a href="/blog">Blog</a></li>
-    <li><a href="http://github.com/alexandervn">Github</a></li>
-    <li><a href="http://www.twitter.com/alexandervn">Twitter</a></li>
-    <li><a href="http://www.flickr.com/photos/alexandervn">Twitter</a></li>
-    <li><a href="http://www.linkedin.com/alexandervannoord">LinkedIn</a></li>
+
+<h2>Articles</h2>
+<p>See <a href="/blog">blog overview</a></p>
+
+<h2>Follow me on</h2>
+<ul class="socials">
+    <li class="github"><a href="http://github.com/alexandervn">Github</a></li>
+    <li class="twitter"><a href="http://www.twitter.com/alexandervn">Twitter</a></li>
+    <li class="flickr"><a href="http://www.flickr.com/photos/alexandervn">Flickr</a></li>
+    <li class="linkedin"><a href="http://nl.linkedin.com/in/alexandervn">LinkedIn</a></li>
 </ul>
-<p>Rotterdam</p>
-<p>E-mail: firstname @ therock.nl</p>
+
+<h2>Contact at</h2>
+<ul class="socials">
+    <li class="email"><em>firstname</em> @ therock.nl</li>
+</ul>
+
+<footer role="conteninfo">
+    <p><a href="http://creativecommons.org/licences/by-sa/3.0/">CC BY-SA 3.0</a> &middot; Icons by <a href="http://www.entypo.com">Entypo</a></p>
+</footer>
 {{ contents | safe }}
 {% endblock %}
