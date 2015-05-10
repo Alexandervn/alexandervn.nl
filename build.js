@@ -17,31 +17,50 @@ metalsmith(__dirname)
         description: ''
     }
 })
-.source('./src/posts')
+.source('./src')
 .destination('./build')
 .use(collections({
     posts: {
-        pattern: '!index.md',
+        pattern: 'posts/*.md',
         sortBy: 'date',
         reverse: true
     }
 }))
-.use(markdown())
 .use(branch()
-        .pattern('!index.md')
+        .pattern('posts/*.md')
+        .use(markdown())
+        .use(templates({
+            'engine': 'swig',
+            'directory': 'templates'
+        }))
         .use(permalinks({
             pattern: ':date/:slug',
             date: 'YYYY/MM/DD'
         }))
 )
-.use(templates({
-    'engine': 'swig',
-    'directory': 'templates'
-}))
-.use(assets({
-    'source': './src/assets',
-    'destination': '.'
-}))
+.use(branch()
+        .pattern('blog.md')
+        .use(markdown())
+        .use(templates({
+            'engine': 'swig',
+            'directory': 'templates'
+        }))
+        .use(permalinks({
+            pattern: 'blog'
+        }))
+)
+.use(branch()
+        .pattern('index.md')
+        .use(markdown())
+        .use(templates({
+            'engine': 'swig',
+            'directory': 'templates'
+        }))
+)
+//.use(assets({
+//    'source': './src/assets',
+//    'destination': '.'
+//}))
 //.use(gzip({
     //overwrite: false
 //}))

@@ -7,7 +7,7 @@ slug: philosophers-influences
 
 Lately I have been searching for many philosophers on Wikipedia. I found that a good way to browse through them is with the help of the 'Influenced' and 'Influenced by' parameters shown in the infoboxes on the right of a Wikipedia page:
 
-<p style="text-align:center;"><img style="border:1px solid #EEE;" alt="Kierkegaard's influences" src="/images/kierkegaard-influenced-by.png"></p>
+<p style="text-align:center;"><img style="border:1px solid #EEE;" alt="Kierkegaard's influences" src="/assets/images/kierkegaard-influenced-by.png"></p>
 
 Then I thought: wow, I could scrape and visualize this! (And have a good reason to use Python again.)
 
@@ -23,11 +23,11 @@ They used [Dbpedia](http://dbpedia.org/), which is a great product I had never h
 
 Anyway, it was fun to do. Here are some renderings.
 
-![Schopenhauer in the graph](/images/graph-schopenhauer.jpg)
+![Schopenhauer in the graph](/assets/images/graph-schopenhauer.jpg)
 
-![Graph made with the OpenOrd algorithm](/images/philosophers-graph-openord.jpg)
+![Graph made with the OpenOrd algorithm](/assets/images/philosophers-graph-openord.jpg)
 
 Download:
 
-- Full graph (with names) as <a href="/files/philosophers-wikipedia-unfiltered-fruchrein.pdf" target="_blank">PDF</a>
-- Data (unfiltered) as a <a href="/files/philosophers-wikipedia-unfiltered.dot" target="_blank">DOT-file</a>
+- Full graph (with names) as <a href="/assets/files/philosophers-wikipedia-unfiltered-fruchrein.pdf" target="_blank">PDF</a>
+- Data (unfiltered) as a <a href="/assets/files/philosophers-wikipedia-unfiltered.dot" target="_blank">DOT-file</a>
