@@ -274,10 +274,23 @@ footer p {
 }
 
 .posts time {
-    width:110px;
     display:inline-block;
+    margin-right:20px;
+    font-family:"Lucida Console", monospace;
+    font-size:0.8em;
 }
 
+@media (max-width: 599px) {
+    .posts li {
+        margin-bottom:1em;
+    }
+
+    .posts a {
+        display:block;
+    }
+}
+
+/* Code */
 pre {
     line-height:1.4;
     margin-bottom:1.6em;
