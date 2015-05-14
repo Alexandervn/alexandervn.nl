@@ -187,7 +187,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     font-size:3em;
-    margin:1em 0 0.3em 0;
+    margin:2rem 0 0.3em 0;
 }
 
 h2 {
@@ -210,6 +210,10 @@ h3 {
 }
 
 /* Navigation */
+.back {
+    margin-bottom:3em;
+}
+
 .back a {
     background-color:#EEE;
     padding:10px 15px;
@@ -219,7 +223,8 @@ h3 {
 
 /* Footer */
 footer {
-    margin-top:5em;
+    float:left;
+    margin-top:40px;
 }
 
 footer, 
